@@ -1,0 +1,72 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Selectores</title>
+<style type="text/css">
+	p{
+		color: #666666;
+		font-size:1em;
+		font-family: "Helvetica Neue",Arial,Helvetica,sans-serif;
+		text-align:justify;/*Justificamos la letra*/
+		margin-left:100px;/*para indicar la margen izquierda de los parrafos*/
+		
+	}
+	h1,h2,h3{;
+		color:#339933;
+		font-family:Baskerville,"Palatino Linotype", Times, Serif;
+		border-top:2px;/*Para Indicar El grosor del border top de la linea solid, siempre va indicado de primeras, antes del diseño o tipo de border*/
+		border-top:solid;/*Indicamos que queremos solo el borde de arriba con diseño de linea"solido"*/
+		border-top-color:#006666;/*Para indicar el color del borde*/
+		/*margin-left:100px;*//*Si Indicamos esta propiedad, el borde tambien tendra el margen y se correra la linea de arriba el borde, por eso no lo indicamos por que queremos que el border top quede en toda la pantalla*/
+		padding-left:100px;/*nos ayuda a indicar el espacio izquierdo entre el contenido y el border, de esta manera no se afecta el border top, y se vera la linea solid en toda la pantalla*/
+		padding-top:7px;/*indicamos el espacio de arriba que hay entre el contenido y el border*/
+		
+	}
+	
+	.atencion{
+		color:#000000;
+		border:2px dashed #663333;/*indicamos todas las propiedades del border en una sola linea, empezando por grosor, tipo, color*/
+		background-color:#FFFF99;/*Indicamos color de fondo*/
+		margin-top:25px;/*margin indica el espacio entre el borde de nuestro componente con el borde de otro componente*/
+		margin-bottom:35px;/*Indicamos el espacio que hay entre el borde de abajo de nuestro componente con el borde de otro componente*/
+		padding:20px;/*indicamos el espacio que hay entre el contenido y el borde*/
+	}
+	.atencion, strong{/*Selectores Descendientes, indicamos el color a la etiqueta strong que este dentro de otra etiqueta cualquiera que tenga class="atencion"*/
+		color:#FF9900
+	}
+	#cuerpo{/*Para Aplicar diseño al cuerpo body*/
+		background-color:#FFFF99;/*Indicamos color de fondo*/
+		background-image:url(imagenes/fondo.jpg);/*Indicamos la imagen de fondo*/
+		background-repeat:repeat-y;/*Para repetir la imagen verticalmente*/
+		background-position:center top;/*Para centrar la imagen, aparecera en el eje x en el centro, y en el eje y arriba*/
+		width:760px;/*Para cambiar el tamaño de ancho del body, para que se acomode al tamaño del fondo de pantalla*/
+		margin:0 auto;/*con esta instruccion conseguimos que el contenido este centrado, y no importa la resolucion del monitor en que lo miremos, si cambiamos el tamaño de la ventana, este automaticamente se centrara con respecto al tamaño, el "0" nos indica que queremos de margen 0, por eso el banner queda arriba son espacio de margen*/
+	}
+	h1+p{/*Selector hermano, modificara los "p" que estan acontinucacion de "h1"*/
+		color:#f60;
+		font-size:1.2em;
+		line-height:140%;/*interlineado la medida se puede poner en porcentaje o en pixels */
+		margin-top:20px;/*indicamos el espacio entre el borde superior con respecto a otro componente que este en la parte superior*/
+	}
+</style>
+
+</head>
+
+<body id="cuerpo">
+<div id="banner"><img src="imagenes/banner.jpg" width="760" height="192" alt="CSS: The Missing Manual">
+
+
+<h1>El diseño web con CSS</h1>
+<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. </p>
+<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+<p class="atencion"><strong>ATENCIÓN:</strong> Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? </p>
+<h2>¿Conoces el poder de CSS?</h2>
+<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+<p class="atencion"><strong>ATENCIÓN:</strong> Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? </p>
+<h3>Seguimos aprendiendo</h3>
+<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+<h3>Diseños atractivos</h3>
+<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+</body>
+</html>

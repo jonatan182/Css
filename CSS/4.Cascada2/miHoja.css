@@ -1,0 +1,80 @@
+/* CSS Document */
+
+/**{hacemos un reset para todos los elementos, para quitar los margenees y padding por defectos que indica los navegadores, los indicamos en 0;
+	margin:0;
+	padding:0;
+}*/
+
+/*-----Reset CSS para resetear nuestra pagina para que se quiten los valores por defectos que aplican los navegadores a nuestros componentes, es decir que es un punto de partida comun para todos los navegadores-------*/
+
+html,body,h1,h2,h3,h4,h5,h6,p,ol,ul,li,pre,code,address,form,fielset{
+	margin:0;
+	padding:0;
+	font-size:100%;/*para que el tamaño de letra en todos los navegadores sea el tamaño original en todos los navegadores*/
+	font-weight:normal;/*Para quitar la negrita, ya que esta establece el grosor con la que se muestran las letras*/
+}
+ol{
+	margin-left:1.4em;/*em es una unidad de medida css, es como una especie de multiplicador, es decir que el margen izquierdo sera de 1.4 veces el tamaño que tiene por defecto*/
+	list-style:decimal;/*Especificamos el tipo el tipo de marcador de item de la lista, en este caso sera decimal "1,2,3,4..etc, con upper-alpha  sera A,B,C,D..etc"*/
+}
+ul{
+	margin-left:1.4em;/*em es una unidad de medida css, es como una especie de multiplicador, es decir que el margen izquierdo sera de 1.4 veces el tamaño que tiene por defecto*/
+	list-style:square;/*Especificamos el tipo el tipo de marcador de item de la lista, en este caso sera un cuadrado*/
+}
+img{
+	border:0;/*Especificamos que las imagenes no tendran borde*/
+}
+/*--------Hasta aqui el reset css------------*/
+
+
+#principal{/*bloque principal que aparecera ala izquierda*/
+	float:left;/*para que el bloque principal se quede a la izquierda, y lo que valla a continuacion se coloque a la derecha, simpre y cuando No tenga el tamaño del 100% ya que ocupara toda la pantalla en x "ancho"*/
+	width:580px;/*para que no ocupe toda la pantalla si no solo 580px de ancho, de esta manera los otros componentes si se podran ubicar a la derecha*/
+}
+#lateral{
+	margin-left:600px;/*distancia por la parte izquierda, cuenta desde el borde de la pantalla, es decir que va a estar separado de #principal 20px */
+	padding-left:15px;
+	background:#e1cdff;/*color de fondo gris*/
+}
+body{
+	color:#b1967c;/*color de texto*/
+	font-family:"Palatino Linotype", "Book Antiqua", serif;/*indicamos tipo de letra*/
+	padding-top:100px;/*Especificamos una distancia entre el border superior y el contenido*/
+	background:#e1cdff url(images/fondo_cuerpo.png) repeat-x;/*color de fondo gris, indicamos una imagen de fondo y que se repita en x, a este color de fondo y imagen de fondo no se aplica el padding top "innaccion de la herencia"*/
+	width:750px;/*indicamos el ancho de la pagina*/
+	margin:0 auto;/*centramos la pagina*/
+}
+h1{
+	font-size:3em;/*el tamaño sera 3 veces mas del que tiene*/
+	font-family:"Arial Black", Gadget, sans-serif;
+}
+h2{
+	font-size:2.2em;
+	color:#600;
+	margin-bottom:10px;/*Distancia de margen entre h1 y el componente de abajo*/
+}
+p{
+	text-align:justify;
+}
+
+#principal h2{/*Estilo descendiente solo se aplicara a los h2 que estan adentro de principal*/
+	color:#e8a064;
+	border-bottom:3px solid #FFFFFF;/*para la linea blanca que es el border de abajo del h2*/
+	background:url(images/flor.png) no-repeat;/*indicamos una imagen de fondo, una rosa blanca*/
+	padding:0 0 2px 80px;/*para correr el texto para que no quede encima de la imagen*/
+}
+#principal p{/*Estilo descendiente solo se aplicara a los p que estan adentro de principal*/
+	color:#616161;
+	font-family:"Palatino Linotype", "Book Antiqua", serif;
+	font-size:1.1em;/*tamaño de la letra, sera 1.1 mas grande que el que tiene, si indicaramos 2 seria el doble de grande ya que es un multiplicador*/
+	line-height:150%;
+	margin-bottom:10px;
+	margin-left:80px;
+}
+#principal .introduccion{/*Estilo descendiente, para tener mas puntos y a si vencer al de arriba que tiene 101 puntos id+estiqueta, este tiene 110 puntos id+class si solo indicaramos el id no proporcionaria estos atributos ya que estan en conflicto y hace caso al que mas puntos tenga*/
+	color:#000;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:1.2em;
+	margin-left:0px;/*quitamos la sangria que fue indicada anterior mente de 90px*/
+	margin-bottom:25px;
+}

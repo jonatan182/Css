@@ -1,0 +1,154 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Píldoras informáticas. Posicionamiento</title>
+<link href="hoja.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+	#banner #logobanner{
+		position:absolute;/*Con este posicionamiento sacamos la imagen del flujo html, es decir que esta imagen no notiene que estar acontinuacion de la anterior etiqueta que es el logo*/
+		left:-22px;/*Una vez sacada la imagen del flujo podemos colocarla donde queramos por eso la colocamos a -22 en eje x y -5 en y con respecto a la pagina web o al body y no al div banner ya que este div banner no es relativo*/
+		top:-5px;
+	}
+	#banner{
+		position:relative;/*con esta posicion estamos indicando que todo lo que este adentro de este div se posicione relativo a el, incluida la imagen de logobanner, entonces las medidas del logobanner de -22 y -5 seran con respecto a este div banner y no a la pagina web*/
+	}
+	body{
+		margin:20px;
+	}
+	#banner #logo{
+		margin:30px;
+	}
+	#banner ul{
+		position:absolute;/*lo sacamos de flujo, ahora podemos colocarlo en cualquier parte del banner ya que este es relative*/
+		right:60px;/*se desplaza a la derecha, ya que tentra una distancia de 60px a la derecha, por eso es diferente al margin, es decir se colocara a 60px de espacio a la derecha, ya que no indicamos el espacio por la izquierda*/
+		bottom:5px;/*se colocara con un espacion de 5px por abajo*/
+		/*la ventaja es que se redimenciona ya que es con respecto al div del banner*/
+	}
+	#principal .foto{
+		float:right;
+		width:200px;
+		margin-left:10px;
+		margin-bottom:2px;
+		position:relative;/*para que todo lo que este en su interior incluyendo el pie se posicione con respecto a el*/
+	}
+	#principal .foto p{
+		background-color:#FFFFFF;
+		border:1px dashed #666666;
+		font-weight:bold;/*Negrita*/
+		font-size:13px;
+		text-align:center;/*Lo Aliniamos En El Centro*/
+		padding:5px;
+		width:168px;/*damos un ancho al pie de la imagen*/
+		position:absolute;/*quitamos el flujo, es decir que podemos indicarlo donde queramos dentro del div que lo contiene si este es relativo, de tal modo que no sigue el flujo por defecto static de html que es posicionarlo junto despues de la anterio etiqueta*/
+		left:10px;
+		bottom:10px;
+		
+	}
+	#contenidoPrincipal{
+		position:relative;
+	}
+	#barralateral{
+		position:absolute;/*Para quitar El Flujo*/
+		top:35px;
+		left:0px;/*para alinearla a la izquierda*/
+		width:170px;/*ancho de 125px*/
+	}
+	#advertencias{/*la desplazamos a la derecha*/
+		position:absolute;
+		right:0px;
+		top:35px;
+		width:125px;
+	}
+	#principal{
+		margin-left:170px;/*para que el contenido empiece despues de la barralateral*/
+		margin-right:125px;/*para que termine justo antes de que empiece la barra de advertencias, es decir que no pase por abajo*/
+		text-align:justify;
+		padding-left:20px;
+		padding-right:15px;
+		padding-bottom:15px;
+		border:1px solid #666666;
+		border-top:none;
+		border-bottom:none;
+	}
+	#contenedor{
+		position:relative;
+		margin:auto;
+	}
+
+</style>
+
+</head>
+
+<body>
+<div id="contenedor">
+<div id="banner"><img src="images/logo.gif" alt="CosmoFarmer 2.0" name="logo" width="413" height="74" id="logo"/>
+  <img src="images/cosmo_badge.gif" alt="Durante años" width="78" height="78" id="logobanner"/>
+  <ul>
+    <li class="separador"><a href="#">SuSCRÍBETE</a></li>
+    <li><a href="#">ACERCA DE NOSOTROS</a></li></ul>
+</div>
+
+  <div id="princNav">
+  <ul>
+    <li><a href="#">Inicio</a></li>
+	  <li><a href="#">Características</a></li>
+	  <li><a href="#">Expertos</a></li>
+	  <li><a href="#">Preguntas</a></li>
+	  <li><a href="#">Proyectos</a></li>
+	  <li><a href="#">Horóscopos</a></li>
+  </ul>
+  </div>
+  
+<div id="contenidoPrincipal">
+  <div id="principal">
+    <h1>Píldoras informáticas celebra un año de funcionamiento</h1>    
+	<div class="foto">
+	  <img src="images/old_home.jpg" alt="The Original Cosmo Home Page" width="200" height="186" />
+	  <p>Píldoras informáticas en la vanguardia</p>
+	</div>
+    
+    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+    <h2>Mayo 2012. Comienza la aventura</h2>
+    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+    <h2>Diciembre 2012. Termina el primer ejercicio<em><strong></strong></em> </h2>
+    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+    <h2>Enero 2013. Comienza el nuevo ejercicio </h2>
+    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+    <p style="margin-bottom: 0;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+  </div>
+  <div id="barralateral">
+    <h2>Actualidad</h2>
+    <h3><a href="#">Nuevos cursos avanzados en breve</a></h3>
+    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut.</p>
+    <h3><a href="#">Curso de VBA Access</a></h3>
+    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna ali.</p>
+    <h3><a href="#">Curso de Java</a></h3>
+    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna ali.</p>
+    <h2>Pululando por la web</h2>
+    <h3><a href="#">Prácticas habituales </a></h3>
+    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh.</p>
+    <h3><a href="#">Técicas obsoletas </a></h3>
+    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh.</p>
+    <h2>Lo más actual </h2>
+    <h3><a href="#">HTML5 </a></h3>
+    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut</p>
+    <h3><a href="#">¿Android o iOS?</a></h3>
+    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy </p>
+    <h2>Horóscopos de hoy</h2>
+    <h3>Libra: Todo lo tienes de cara</h3>
+    <p>Es un buen momento para iniciar negocios. Se valiente y no mires atrás. La gloria siempre será para los valientes. Arriesga.</p>
+  </div>
+  <div id="advertencias">
+    <p><a href="#"><img src="images/ad1.png" alt="Learn to Cook" width="120" height="240" border="0" /></a></p>
+    <p><a href="#"><img src="images/ad2.png" alt="Johnson's" width="120" height="600" border="0" /></a></p>
+  </div>
+  <p id="pie">2013. Píldoras informáticas</p>
+</div>
+</div>
+</body>
+</html>

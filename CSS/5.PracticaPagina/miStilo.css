@@ -1,0 +1,68 @@
+/* CSS Document */
+html,body,h1,h2,h3,h4,h5,h6,p,ol,ul,li,pre,code,address,form,fielset{
+	margin:0;
+	padding:0;
+	font-size:100%;/*para que el tamaño de letra en todos los navegadores sea el tamaño original en todos los navegadores*/
+	font-weight:normal;/*Para quitar la negrita, ya que esta establece el grosor con la que se muestran las letras*/
+}
+ol{
+	margin-left:1.4em;/*em es una unidad de medida css, es como una especie de multiplicador, es decir que el margen izquierdo sera de 1.4 veces el tamaño que tiene por defecto*/
+	list-style:decimal;/*Especificamos el tipo el tipo de marcador de item de la lista, en este caso sera decimal "1,2,3,4..etc, con upper-alpha  sera A,B,C,D..etc"*/
+}
+ul{
+	margin-left:1.4em;/*em es una unidad de medida css, es como una especie de multiplicador, es decir que el margen izquierdo sera de 1.4 veces el tamaño que tiene por defecto*/
+	list-style:square;/*Especificamos el tipo el tipo de marcador de item de la lista, en este caso sera un cuadrado*/
+}
+img{
+	border:0;/*Especificamos que las imagenes no tendran borde*/
+}
+/*--------Hasta aqui el reset css------------*/
+
+#principal{
+	float:left;
+	width:500px;
+	padding-right:30px;
+}
+body{
+	background:url(imagenes/fondo.jpg) repeat-y;
+	background-position:center top;
+	width:760px;
+	padding-top:10px;
+	padding-left:40px;
+	margin:0 auto;
+	background-color:#FFFF99;
+	text-align:justify;
+	padding-right:40px;
+	font-family:"Palatino Linotype", "Book Antiqua", serif;
+	color:#999999;
+}
+h1{
+	font-size:3.5em;
+	font-family:Georgia, "Times New Roman", Times, serif;
+	padding-bottom:10px;
+	color:#993300;
+}
+h2{
+	color:#993333;
+	font-size:3.3em;
+	margin:20px 10px 20px 10px;
+	padding-left:100px;
+	background:url(imagenes/next.png) no-repeat;
+	background-position:left;
+	border-bottom:3px solid #993366;
+	width:390px;
+}
+#lateral h2{
+	color:#993333;
+	font-size:2.7em;
+	margin:20px 10px 20px 450px;
+	border:none;
+	background-image:none;
+}
+#principal p{
+	padding-left:100px;
+}	
+#principal .introduccion{
+	color:#000000;
+	padding-left:10px;
+}

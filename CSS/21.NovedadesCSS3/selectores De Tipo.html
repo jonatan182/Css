@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Documento sin t&iacute;tulo</title>
+<style type="text/css">
+/*SELECTORES DE TIPO, aplica formato a los elementos hijos de un tipo especifico*/
+ #barraLateral{
+ 	background-color:#CF9;
+	width:350px;
+ }
+/* #barraLateral p:first-of-type{aplicaremos diseño a la primer  etiqueta de tipo "<p>" que esta dentro de #barraLateral
+ 	color:#000099;
+	font-weight:bold;
+ }*/
+/* #barraLateral p:last-of-type{aplicaremos diseño a la ultima etiqueta "<p>" que esta dentro del div "#barraLateral"
+ 	color:#00FF00;
+	font-weight:bold;
+	border-bottom:5px dotted #03C;aplicamos borde inferior, es muy utilizado para separar
+ }*/
+/* #barraLateral p:nth-of-type(odd){aplicaremos diseño a la primer etiqueta de "<p>" que esta dentro de #barraLateral, he ira intercalado, es decir el primero si, el segundo no, el tercero si..etc, es decir los impares 1,3,5,7
+ 	color:#00FF00;
+	font-weight:bold;
+	border-bottom:5px dotted #03C;aplicamos borde inferior
+ }*/
+/*	#barraLateral p:nth-of-type(even){es similar al de arriba, aplica diseño a la etiqueta "<p>" que esta dentro de #barraLateral de manera intercalada, la diferenca es que este empieza desde el segundo elemento, y con odd empieza desde el primer elemento, este aplica diseño a los pares, 2,4,6,8
+		color:#00FF00;
+		font-weight:bold;
+		border-bottom:5px dotted #03C;aplicamos borde inferior
+	}*/
+	#barraLateral p:nth-of-type(3n+1){/*aplicamos diseño como queramos, "3n" significa el salto que va hacer, el intercalado, decimos que es de tres en tres, y el "1" hace referencia apartir del elemento que va a empezar, siendo 1 el primer elemento, si fuese "0" lo tomaria como el valor que acompaña a xn */
+		color:#CC3399;
+		font-weight:bold;
+		border-bottom:5px dotted #03C;/*aplicamos borde inferior*/
+	}
+</style>
+</head>
+<body>
+	<div id="barraLateral">
+		<ul>
+			<li>Manzanas</li>
+			<li>Peras</li>
+			<li>Limones</li>
+			<li>Naranjas</li>
+		</ul>
+		<br/>
+		<p>Este Es El Primer Parrafo</p>
+		<p>Este Es El Segundo Parrafo</p>
+		<p>Este Es El Tercer Parrafo</p>
+		<p>Este Es El Cuarto Parrafo</p>
+	</div>
+</body>
+</html>

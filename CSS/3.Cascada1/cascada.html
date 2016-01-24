@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Documento sin t&iacute;tulo</title>
+<style type="text/css">
+/*Entra en accion la herencia*/
+	body{
+	 	font-family:Verdana, Arial, Helvetica, sans-serif;
+		color:#FF0000;
+	}
+	p{
+		color:#0f0;
+	}
+	strong{/*hay dos propiedades en conflicto, ambas indicando un color diferente, tomara el mas especifico"Cercano" en este caso el de p*/
+		font-size:32px;
+	}
+</style>
+</head>
+
+<body>
+<!--un Vinculo simpre tiene su estilos predefinidos uno de ellos es de color azul, a si este dentro de p no obtendra el color verde si no a zul-->
+<p><a href="http://www.google.com.co">Ir A google</a>Hoy Es Lunes Y Hace <strong>Calor</strong></p><!-- p heredara el tipo de letra de body y tendra su propio atributo de color azul, strong heredara el color de p, y el tipo de letra de body, y tendra su propio atributo size de 32, ya que strong esta adentro de las dos etiquetas anteriores-->
+</body>
+</html>

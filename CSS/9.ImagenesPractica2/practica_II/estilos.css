@@ -1,0 +1,45 @@
+body {
+	font-size: 62.5%;
+	margin: 0;
+	padding: 0;
+}
+
+#contenido {
+	margin-left: 15px;
+	margin-top: 15px;
+	border: 1px dashed #999;
+	border-right: none;
+	border-bottom: none;
+}
+
+h1 {
+	font: normal 2.4em Verdana, Arial, Helvetica, sans-serif;
+	margin: 0;
+	border-bottom: 1px dashed #999;
+	padding: 5px 0 5px 8px;
+	color: #14556b;
+}
+
+p {
+	font:1.6em Georgia, "Times New Roman", Times, serif;
+	margin:10px 8px;
+}
+.figura img{/*Aplicraemos diseño a la imagen que esta dentro del contenedor o div de classs figura*/
+	border:1px solid #000000;
+	padding:10px;/*para separar el borde de la imagen*/
+	
+}
+.figura{/*enviamos a la derecha la imagen y el pie*/
+	float:right;
+	width:222px;/*indicamos el ancho, para que el pie"<p>" aparezca al mismo ancho de la imagen*/
+	margin:15px 10px 5px 10px;
+}
+.figura p{/*aplicamos diseño al parrafo que esta dentro del contenedor div de class figura, este es el pie de la pimagen*/
+	font:1em Verdana, Arial, Helvetica, sans-serif;
+	color:#333;
+	text-align:center;
+	background-color:#3f9;
+	border:1px dashed #0066FF;
+	padding:5px;
+	margin:10px 0 0 0;/*para sobreescribir el margin que heredamos por cascada que hera de margin:10px 8px; de esta manera el pie"<p> obtendra el mismo ancho de la imagen*/
+}

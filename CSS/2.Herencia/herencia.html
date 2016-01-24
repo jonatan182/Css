@@ -1,0 +1,52 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Herencia</title>
+<style type="text/css">/*Gracias a la herencia pordemos ahorrar mucho tiempo a la hora de crear nuestras paginas web y gestionar el formato de nuestras paginas web*/
+
+	/*strong{/*Etiqueta Especifica a strong, es la mas especifica y esta anula la herencia de strong de las propiedades indicadas adentro en este caso el color
+	color:#0000FF;
+	}*/
+	p{
+		color:#FF6600;/*siempre se queda con el color de la etiqueta css mas especifica o cercana, ya que estamos indicando un color aca y otro en el body, y se queda oviamente con este, ya que este es la etiqueta mas especifica, tambien se aplica esto a las etiquetas strong, ya que esta adentro de p, a esto se denomina herencia, si cambio el color desde una etiqueta mas cercana o especifica a strong se quita la herencia y se queda con el color indicado*/
+		text-align:justify;
+		margin-left:50px;
+		padding-left:20px;
+		border-left:22px solid #993300;/*No se aplica este borde izquierdo a strong esto se denomina innaccion de la herencia, nos ayuda ya que se veria mal la etiqueta strong con un border izquierdo dentro de p. "En genereal todas las propiedades css que hacen referencia a borders y a colocacion de elementos no se heredan, mientras que todas las propiedades que hacen referencia a la apariencia del texto como por ej: el color, tamaño..etc si se heredan. Cuando hay 2 propiedades en conflicto como en caso anterior del color de p que esta recibiendo 2 colores uno heredado del cuerpo y otro  especifico a el cuando ocurre esto siempre se aplica la propiedad mas especifica"*/
+	}
+	.estiloPagina{
+		font-family:"Trebuchet MS",Arial;
+		font-size:13px;
+		color:#996633;/*Es El Color por Defecto Que Tendran El diferente texto sea p, h1,h2,h3... li..etc, si se modifica el color desde una etiqueta mas especifica lo cambia, pero si no se indica nada en otra etiqueta, este es color por defecto que tiene, esto se denomina herencia ya que todas los componentes que indiquen en el body tendran este color por defecto si no se modifica por una etiqueta mas especifica*/
+		width:750px;
+		margin:0 auto;
+	}
+	h1,h2,h3{
+		border-top:4px solid #993300;
+		padding:40px;
+	}
+	li{
+		margin-left:40px;
+	}
+</style>
+</head>
+
+<body class="estiloPagina">
+<div><img src="imagenes/banner.jpg" width="760" height="192" alt="CSS: The Missing Manual">
+</div>
+<h1>El apasionante mundo de CSS</h1>
+<p><strong>Sed ut perspiciatis</strong> unde omnis iste natus error sit <em>voluptatem accusantium</em> doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo <strong>inventore veritatis et quasi architecto beatae</strong> vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia  eos qui ratione voluptatem sequi nesciunt. </p>
+<ul>
+  <li>adipisci velit</li>
+  <li>autem vel eum iure re</li>
+  <li> ut lautem vel eum i</li>
+</ul>
+<h2>El gran poder de CSS</h2>
+<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem <strong>Sed ut perspiciatis</strong> unde omnis iste natus error sit <em>voluptatem accusantium</em> doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo <em>inventore veritatis et quasi architecto</em> beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia  eos qui ratione voluptatem sequi nesciunt. Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+<h3>Hazlo!</h3>
+<p><strong>Sed ut perspiciatis</strong> unde omnis iste natus error sit <em>voluptatem accusantium</em> doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia  eos qui ratione voluptatem sequi nesciunt. odi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima <strong>veniam, quis nostrum</strong> exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+<h3>Hazlo bien!</h3>
+<p><strong>Sed ut perspiciatis</strong> unde omnis iste natus error sit <em>voluptatem accusantium</em> doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia  eos qui ratione voluptatem sequi nesciunt. </p>
+</body>
+</html>

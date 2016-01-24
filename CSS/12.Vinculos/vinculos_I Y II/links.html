@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Vínculos 1</title>
+<link href="main.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+
+	a{
+		color:#207ebf;/*indicamos un color azul mas claro del que ttiene por defecto*/
+		text-decoration:none;/*quitamos la decoracion, la linea del link*/
+		font-weight:bold;/*indicamos negrita*/
+		border-bottom:2px solid #f30;/*indicamos nuestro propio subrayado*/
+	}
+	a:visited{/*agregaremos un diseño para los link visitados*/
+		color:#999;
+	}
+	a:hover{/*cuando pasamos el puntero por el link se aplica el diseño*/
+		color:#fff;
+		background-color:#666666;
+		border-bottom:#666666;/*para que tenga el aspecto de que desaparezca el subrayado o border botton*/
+	}
+	#correo a{/*estilo descendiente, aplicaremos un diseño a las etiquetas a que estan dentro del div correo*/
+		color:#666666;
+		border:none;/*para quitar el border, el subrayado*/
+		background:url(images/email.gif) no-repeat left center;/*indicamos imagen de fondo la aliniamos a la izquierda en x y en y centrada, a si se quita la cascada, la herencia del hover de cambiar de color a gris*/
+		padding-left:20px;/*para que el texto de a no este encima de la imagen*/
+		margin-left:10px;
+	}
+	#recursos a{/*Estilo descendiente */
+		border-bottom:none;/*quitamos el borde inferior*/
+		padding-right:20px;/*espacio que nos sirve para separar la imagen de fondo*/
+	}
+	a[href^='http://']{/*con este selector estamos indicando que vamos a apuntar a todos los vinculos 'a' de la pagina, pero solamente a aquellos que hagan referencia"href" externa, que comience"^"  con http://. Es decir solo modificaremos los vinculos que apuntan a un http*/
+		background:url(images/globe.png) no-repeat right top;/*esta imagen de fondo identificara los sitios externos*/
+				
+	}/*'^' comiencen por
+	   '$' terminen por*/
+	a[href$='.pdf']{/*con este selector le estamos dando formato a todas las etiquetas a que hacen una referencia"href" externa y que terminen"$" por .pdf*/
+		background:url(images/acrobat.png) no-repeat right top;/*esta imagen hara referencia a los links que terminen con .pdf*/
+	}
+	a[href$='.doc']{/*con este selector le estamos dando formato a todas las etiquetas a que hacen una referencia"href" externa y que terminen"$" por .doc*/
+		background:url(images/word.png) no-repeat right top;/*esta imagen hara referencia a los links que terminen con .doc*/
+	}
+	a[href$='.zip']{/*con este selector le estamos dando formato a todas las etiquetas a que hacen una referencia"href" externa y que terminen"$" por .pdf*/
+		background:url(images/zip.png) no-repeat right top;/*esta imagen hara referencia a los links que terminen con .pdf*/
+	}
+</style>
+
+
+
+</head>
+
+<body>
+<div id="principal">
+<h1><strong>CSS</strong>Píldoras informáticas</h1>
+<h2>Los vínculos son el alma de la red</h2>
+<p class="byline">OCTUBRE 8<strong>PÍLDORAS</strong></p>
+<div id="recursos">
+<h3> ReCURSOS</h3>
+<ul>
+  <li><a href="informe.pdf">Informe anual</a></li>
+  <li><a href="plantilla.doc">Plantilla Mundial Corporativa</a></li>
+  <li><a href="logos.zip">Gráficos Corporativos</a></li>
+  <li><a href="http://www.pildorasinformaticas.com">Sitio Corporativo </a></li>
+  <li><a href="http://www.google.com/">Más Vínculos</a></li>
+</ul>
+</div>
+<h3>Esse quam nulla</h3>
+<p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? <a href="test.html">Quis autem vel eum</a> iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi <a href="test2.html">ut aliquid ex ea commodi</a> consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+<h3>Quis autem vel eum</h3>
+<p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illu <a href="test3.html">qui dolorem eum</a> fugiat quo voluptas nulla pariatur? Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+<p id="correo"> Píldoras 2013. <a href="mailto:cursos@pildorasinformaticas.com">Comentarios a cursos@pildorasinformaticas.com</a></p>
+</div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+/* CSS Document */
+
+#navegacionPrincipal, #barraLateral, #pieNavega{
+	display:none;/*para que los elementos no se vean*/
+}
+#banner, #comtenidoPrincipal, #pie, #principal{
+	width:auto;/*Para que el navegador aplique todo el ancho disponoble*/
+	margin:0;
+	padding:0;
+}
+#piePrincipal{
+	margin-left:0;/*para quitar el margen left que traia, para que no se aprecie el hueco a la hora de imprimir*/
+}
+html, body, #banner, #contenidoPie{
+	background-color:#FFFFFF;/*quitamos el color de fondo, las imagenes de fondo no las imprime el navegador pero los colores solidos si, por eso indicamos un color de fondo en blanco*/
+}
+#banner{
+	height:auto;/*ajustamos el alto del banner al logo, para quitar el espacio enblanco de la imagen y el bordebotton del banner*/
+	text-align:center;/*centramos el logo*/
+	border-top:2pt solid #000;/*indicamos border, es recomendable que indiquemos las medidas en pt cuando vallamos a imprimir*/
+	border-bottom:2pt solid #000;
+	padding:10pt 0;
+	margin-bottom:15pt;
+}
+*{/*Selector universal, indicamos color de texto en negro*/
+	color:#000000 !important;/*important nos quita la herencia o cascada, es decir que nos va a colocar de color negro eñ texto sin importar que tenga un color morado u otro*/
+}
+h1{
+	font-size:30pt !important;/*para que sea bligatorio es decir que quite la herencia y indique este tamaño*/
+}
+h2{
+	font-size:16pt !important;
+}
+p, li{
+	font-size:11pt;
+}
+#piePrincipal{
+	margin-top:15pt;
+	border-top:1pt solid #000000;
+	padding-top:5pt;
+	text-align:justify;
+}
+a:after{/*pseudoClass  que nos sirve para indicar que despues de que se encuentre un link"a" coloque lo de abajo*/
+	content:"("attr(href)")";/*colocamos el contenido a donde nos lleva el atributo href*/
+}

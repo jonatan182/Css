@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>Barra_navegaci&oacute;n</title>
+<style type="text/css">
+/* reset css */
+html, body, h1, h2, h3, h4, h5, h6, p, ol, ul, li, pre, code, address, variable, form, fieldset, blockquote {
+ padding: 0;
+ margin: 0;
+ font-size: 100%;
+ font-weight: normal;
+}
+table { border-collapse: collapse; border-spacing: 0; }
+td, th, caption { font-weight: normal; text-align: left; }
+img, fieldset { border: 0; }
+ol { padding-left: 1.4em; list-style: decimal; }
+ul { padding-left: 1.4em; list-style:square; }
+q:before, q:after { content:''; }
+/* final reset */
+
+
+body {
+	font: 62.5% Verdana, Arial, Helvetica, sans-serif;
+	padding: 20px;
+}
+#barra{
+/*reseteamos la lista*/
+	margin:0;/*quitamos margenes*/
+	padding:0;/*quitamos padings*/
+	list-style:none; /*quitamos la biñeta*/
+	border-left:1px dashed #999;
+	overflow:hidden;
+}
+
+#barra a{/*aplicaremos un diseño a los vinculos que esten dentro de id "barra"*/
+	color:#000000;/*indicamos color de los vinculos en negro*/
+	font-size:11px;/*tamaño letraS*/
+	text-transform:uppercase; /*convertimos a mayusculas los vinculos*/
+	text-decoration:none;/*quitamos el subrayado*/
+	border:1px dashed #999;/*indicamos un border para que parezcan botones*/
+	padding:7px 5px;/*indicamos espacio entre el borde y el contenido, "a" es una etiqueta inline, no aplica espacios ni por arriba ni por abajo por lo que el texto queda en el mismo lado, tenemos que convertir esta etiqueta inline a una blockline que lleva espacio por arriba y por abajo*/
+	display:block;/*convertimos esta etiqueta inline a una blockline, para que el vinculo de adapte a los espacios del padding y el border, es decir que se comportara como una etiqueta p en donde podremos indicarle padding o espacios por arriba y por abajo, ahora ocupara todo el ancho de la pagina, por eso en #barra aplicamos un ancho para que el vinculo ocupe todo el ancho de la barra*/
+	background-color:#e7e7e7;/*indicamos color de fondo a los vinculos*/
+	/*background:url(images/fondolink.png) no-repeat left top;/*si lo indicamos nos borrara el color de fondo, por eso tenemos que hacerlo con background image y todo por aparte como no-repeat, para que no se borre el color de fondo gris y se muestre el blanco*/
+	background-image:url(images/fondolink.png);
+	background-repeat:no-repeat;
+	background-position:0px 2px;/*para posicionar la imagen, indicando que en X estara en cero y en Y en 2px, de esta manera uno puede bajar la imagen o moverla de izquierda a derecha;*/
+	padding:7px 5px 7px 30px;
+	border-left:none;
+	
+}
+#barra a:hover{/*cada vez que pasamos el puntero por el vinculo que esta dentro de la barra "id="barra"" se aplicara el siguiente diseño*/
+	font-weight:bold;/*indicamos negrita*/
+	background-color:#07f5f7;/*indicamos color de fondo*/
+	/*background-position:3px -35px;/*indicamos la posicion de la imagen, que en el eje y suba 35 px para que se muestre la parte del centro de laimagen puesta a los vinculos, recordemos que esta imagen contiene 3 imagenes una encima de la otra, a esta tecnica se le conoce como sliding doors, indicamos 3px para que en el eje x la imagen no quede pegada al borde*/
+	background-position:3px 50%;/*es la forma mas optima para indicar el posicionamiento de la imagen, es lo mismo de arriba tecnica sliding doors*/
+}
+/*selectores de grupo, cada uno con un selector descendiente*/
+#inicio #linkInicio, /*se aplicara diseño al vinculo linkInicio que esta dentro de inicio, y a si con cada uno que plasmamos acontinuacion*/
+#caracteristicas #linkCaracteristicas,
+#expertos #linkExpertos,
+#preguntas #linkPreguntas,
+#proyectos #linkProyectos,
+#foro #linkForos{
+	background-color:#FFFFFF;
+	background-position:97% 100%;/*de esta manera desplzamos a la derecha la imagen y subirla para mostrar la ultima imagen*/
+	font-weight:bold;/*indicamos la letra en negrita*/
+}
+#barra li{
+	float:left;/*para que se alinien uno a la izquierda del otro*/
+	width:16em;
+}
+
+</style>
+</head>
+<body id="inicio">
+  <ul id="barra">
+    <li><a href="index.html" id="linkInicio">Inicio</a></li>
+    <li><a href="caracteristicas.html" id="linkCaracteristicas">Caracter&iacute;sticas</a></li>
+    <li><a href="expertos.html" id="linkExpertos">Expertos</a></li>
+    <li><a href="preguntas.html" id="linkPreguntas">Preguntas</a></li>
+    <li><a href="proyectos.html" id="linkProyectos">Proyectos</a></li>
+    <li><a href="foros.html" id="linkForos">Foro</a></li>
+  </ul>
+</body>
+</html>

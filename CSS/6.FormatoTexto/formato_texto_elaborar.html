@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Características del texto</title>
+<link type="text/css" rel="stylesheet" href="reset.css"/>
+<style type="text/css">
+	body{
+		color:#003;
+		font-family:Arial, Helvetica, sans-serif;
+		font-size:62%;/*el % indica que el tamaño de la letra va hacer el 62 porciento del tamaño por defecto que son 16px ya que lo resetiamos y el navegador lo coloca como 16 px;*/
+		background:#09F url(imagenes/fondo_div.png) repeat-x;/*indicamos color de fondo, y imagen de fondo azul*/
+	}
+	#principal{
+		width:740px;
+		margin:0 auto;
+		border:4px  solid #FFFFFF;
+		padding:0 10px;/*Forma Abreviada indicamos que tendra 0px arriba y abajo, y 10px izquierda y derecha*/
+		background:url(imagenes/fondo.jpg) no-repeat;/*indicamos imagen de fondo al div y que no se repita*/
+	}
+	#principal h1{/*modificaremos los h1 que estan adentro del div principal, selector descendiente*/
+		color:#f30;
+		font-family:"Arial Black", Arial, Helvetica, sans-serif;/*indicamoos entre comillas los nombre de tipos de letras que tengan espacios en blanco, los que no contengan espacios en blanco en el nombre de tipo de letra no van en comillas*/
+		font-size:4em;/*el tamaño de la letra va hacer 4 veces mas que el que tiene ya sea por defecto o heredado"62%"*/
+	}
+	#principal h1 strong{
+		font-size:120px;
+		color:white;
+		margin-right:-0.75em;/*indicamos margen izquierda negativa para que quede encima del anterior texto*/
+	}
+	#principal h2{/*modificaremos los h2 que estan adentro del div principal, selector descendiente*/
+		font:bold 3.5em "Hoefler Text", Garamond, times, serif;/*indicamos la negrita el tamaño, tipo de letra en una sola instruccion, forma abreviada, nos evitamos indicar font-weight:bold, font-size:3.5...etc*/
+		border-bottom:1px solid #000000;/*tambien es una forma abreviada*/
+		margin-top:25px;/*margen superrior con respecto a lo que tenga por arriba*/
+	}
+	#principal h3{
+		color:#f30;
+		font-size:1.9em;
+		font-weight:bold;/*negrita*/
+		text-transform:uppercase;/*para que lo transforme en mayusculas*/
+		margin-top:25px;
+		margin-bottom:10px;
+	}
+	#principal p{
+		font-size:1.5em;
+		line-height:150%;/*interlineado, espacio que hay entre las lineas del parrafo*/
+		margin-left:150px;/*Para la sangria, espacio entre la margen izquierda y el parrafo*/
+		margin-right:50px;
+		margin-bottom:10px;
+	}
+	#principal p:first-line{/*modificamos la primer line de todos los parrafos que esten dentro del div principal*/
+		font-weight:bold;/*indicamos negrita*/
+		color:#666;
+	}
+	#principal ul{
+		margin:50px 0 25px 50px;
+		width:160px;/*ancho de la lista*/
+		float:right;/*para desplazar la lista a la derecha, y lo que habia acontinuacion pasa a rodear toda la lista*/
+	}
+	#principal li{
+		color:#006666;
+		font-size:1.5em;
+		margin-bottom:7px;/*espacio de separacion de cada li*/
+	}
+	#principal .autor{
+		font-size:1.6em;
+		margin:5px 0 25px 50px;
+	}
+	#principal .autor strong{
+		color:#FF0000;
+		margin-left:5px;
+		text-transform:uppercase;/*Lo Transformamos a mayuscula*/
+	}
+</style>
+</head>
+
+<body>
+<div id="principal">
+<h1><strong>CSS</strong>El curso total</h1>
+<h2>Cambiando el formato al texto</h2>
+<p class="autor">23 Julio <strong>Píldoras informáticas</strong></p>
+<ul>
+  <li>Lorem Ipsum</li>
+  <li>Reprehenderit qui in ea</li>
+  <li>Lorem Ipsum</li>
+  <li>Reprehenderit qui in ea</li>
+  <li>Lorem Ipsum</li>
+  <li>Reprehenderit qui in ea</li>
+</ul>
+<h3>Esse quam nulla</h3>
+<p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+<h3>Quis autem vel eum</h3>
+<p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+</div>
+</body>
+</html>

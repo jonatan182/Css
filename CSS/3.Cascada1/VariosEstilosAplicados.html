@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Documento sin t&iacute;tulo</title>
+<style type="text/css">
+	strong{
+		color:#FF0000;/*Rojo*/
+	}
+	.colorPropio{
+		color:#00FF00;/*Verde*/
+	}
+	#otroColor{
+		color:#0000FF;/*Azul*/
+	}
+</style>
+</head>
+
+<body>
+<p>Hoy Es <strong style="color:#CCFF00" id="otroColor" class="colorPropio">Lunes</strong></p><!--Selector inline vs id vs class vs etiqueta, ganador inline-->
+<p>Hoy Es <strong id="otroColor" class="colorPropio">Lunes</strong><!--Selector id vs selector class, vs selector etiqueta, ganador id-->
+</body>
+</html>
+<!--  --En Caso De Conflicto Quien manda-- conflicto es cuando especificamos un atributos, como lo es color para este caso de diferentes selectores, n
+Un selector de etiqueta = 1punto; vence a la herencia
+un selector de clase = 10puntos; vence a la etiqueta
+Un selector de id= 100 puntos; vence a la class y herencia
+un Selector inline 1000puntos; vence al id, class y etiqueta, Este estilo es el que se indica en la misma linea de la etiqueta
+-->
